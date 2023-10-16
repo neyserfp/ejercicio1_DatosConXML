@@ -44,8 +44,6 @@ public class Main {
 
         int contador = 0;
 
-        // Matriz de peliculas
-
         // Se recorre la lista de nodos extraida
         for (int i = 0; i < nodeList1.getLength(); i++)
         {
@@ -58,19 +56,20 @@ public class Main {
             {
                 Element element1 = (Element) node1;
 
-                // filtrar búsqueda
-                if(element1.getElementsByTagName("titulo").item(0).getTextContent().toUpperCase().contains(busqueda) ||
-                        element1.getElementsByTagName("director").item(0).getTextContent().contains(busqueda) ||
-                        element1.getElementsByTagName("actor").item(0).getTextContent().contains(busqueda))
+                String pelicula = element1.getElementsByTagName("titulo").item(0).getTextContent();
+                String director = element1.getElementsByTagName("director").item(0).getTextContent();
+                String actor = element1.getElementsByTagName("actor").item(0).getTextContent();
+
+                // Filtrar búsqueda
+                if(pelicula.toUpperCase().contains(busqueda) || director.toUpperCase().contains(busqueda) || actor.toUpperCase().contains(busqueda))
                 {
-                    System.out.println("Pelicula: "+element1.getElementsByTagName("titulo").item(0).getTextContent());
-                    System.out.println("Director: "+element1.getElementsByTagName("director").item(0).getTextContent());
-                    System.out.println("Actor: "+element1.getElementsByTagName("actor").item(0).getTextContent());
+                    System.out.println("Pelicula: "+pelicula);
+                    System.out.println("Director: "+director);
+                    System.out.println("Actor: "+actor);
                     contador++;
                 }
 
             }
-            //System.out.println();
         }
 
         if (contador==0){
