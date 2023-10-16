@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE peliculas SYSTEM "xmlData1.dtd">
+<peliculas>
+    <pelicula id="1">
+        <titulo>El Padrino</titulo>
+        <director>Francis Ford Coppola</director>
+        <actor>Marlon Brando</actor>
+    </pelicula>
+    <pelicula id="2">
+        <titulo>El mago de Oz</titulo>
+        <director>Victor Fleming</director>
+        <actor>Judy Garland</actor>
+    </pelicula>
+</peliculas>
