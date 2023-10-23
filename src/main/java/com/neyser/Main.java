@@ -68,6 +68,7 @@ public class Main {
                     System.out.println("Actor: "+actor);
                     contador++;
                 }
+                System.out.println();
 
             }
         }
